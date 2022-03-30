@@ -30,3 +30,52 @@ body {
   overflow: hidden;
   box-shadow: 0px 2px 64px;
 }
+
+.display {
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.display span {
+  font-size: 14px;
+  color: blue;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: o.4s;
+}
+
+button:hover {
+  color: yellow;
+}
+
+.operators {
+  display: flex;
+}
+
+.operators button {
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+}

@@ -65,17 +65,17 @@ button:hover {
 
 .operators button {
   flex: 1 1 0%;
-  background-color: var(--primary);
+  background-color: lightblue;
   font-weight: 700;
 }
 
-.digits {
+.numbers {
   display: flex;
   flex-wrap: wrap;
 }
 
-.digits button {
+.numbers button {
   flex: 1 1 33.333%;
   max-width: 33.333%;
-  background-color: var(--dark);
+  background-color: lightblue;
 }

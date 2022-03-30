@@ -25,11 +25,12 @@ function App() {
 
           <button>Delete</button>
         </div>
-        <div className="numbers"></div>
-        {createDigits()}
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
+        <div className="numbers">
+          {createDigits()}
+          <button>0</button>
+          <button>.</button>
+          <button>=</button>
+        </div>
       </div>
     </div>
   );

@@ -9,13 +9,25 @@ function App() {
   const operators = ["+", "-", "*", "/", "."];
 
   const updateCalc = (value) => {
+    if (
+      (operators.includes(value) && calc === "") ||
+      (operators.includes(value) && operators.includes(calc.slice(-1)))
+    ) {
+      return;
+    }
+
     setCalc(calc + value);
   };
+
   const createDigits = () => {
     const digits = [];
 
     for (let i = 1; i < 10; i++) {
-      digits.push(<button key={i}>{i}</button>);
+      digits.push(
+        <button onClick={() => updateCalc(i.toString())} key={i}>
+          {i}
+        </button>
+      );
     }
 
     return digits;
@@ -37,8 +49,8 @@ function App() {
         </div>
         <div className="numbers">
           {createDigits()}
-          <button>0</button>
-          <button>.</button>
+          <button onClick={() => updateCalc("0")}>0</button>
+          <button onClick={() => updateCalc(".")}>.</button>
           <button>=</button>
         </div>
       </div>

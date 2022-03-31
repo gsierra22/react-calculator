@@ -13,3 +13,7 @@ app.listen(port, () => {
 });
 
 // routes
+app.get("/", (req, res) => {
+  console.log("get here");
+  res.send("Hallo!");
+});

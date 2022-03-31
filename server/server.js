@@ -1,19 +1,13 @@
-// // requires
-// let express = require("express");
-// let app = express();
+const express = require("express");
+const app = express();
 
-// // uses
+const port = 5000;
 
-// // globals
-// const port = 5000;
+app.listen(port, () => {
+  console.log("server up on:", port);
+});
 
-// // spin up server
-// app.listen(port, () => {
-//   console.log("server up on", port);
-// });
-
-// // routes
-// app.get("/", (req, res) => {
-//   console.log("get here");
-//   res.send("Hallo!");
-// });
+app.get("/calc", (req, res) => {
+  console.log("/cacl GET");
+  res.send(items);
+});

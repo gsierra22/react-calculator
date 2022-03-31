@@ -11,12 +11,16 @@ function App() {
   const updateCalc = (value) => {
     if (
       (operators.includes(value) && calc === "") ||
-      (operators.includes(value) && operators.includes(calc.slice(-1)))
+      (operators.includes(value) && operators.includes(calc.slice(-1))) //checks if previous input is operator
     ) {
       return;
     }
 
     setCalc(calc + value);
+
+    if (!operators.includes(value)) {
+      setResult(eval(calc + value).toString()); //eval checks number input
+    }
   };
 
   const createDigits = () => {
@@ -32,11 +36,25 @@ function App() {
 
     return digits;
   };
+
+  const calculator = () => {
+    setCalc(eval(calc).toString());
+  };
+
+  const deleteFunc = () => {
+    if (calc === "") {
+      return;
+    }
+
+    const value = calc.slice(0, -1);
+    setCalc(value);
+  };
+
   return (
     <div className="App">
       <div className="calculator">
         <div className="display">
-          {result ? <span>(0)</span> : ""}
+          {result ? <span>({result})</span> : ""}
           {calc || "0"}
         </div>
         <div className="operators">
@@ -45,13 +63,13 @@ function App() {
           <button onClick={() => updateCalc("*")}>*</button>
           <button onClick={() => updateCalc("/")}>/</button>
 
-          <button>Delete</button>
+          <button onClick={deleteFunc}>Delete</button>
         </div>
         <div className="numbers">
           {createDigits()}
           <button onClick={() => updateCalc("0")}>0</button>
           <button onClick={() => updateCalc(".")}>.</button>
-          <button>=</button>
+          <button onClick={calculator}>=</button>
         </div>
       </div>
     </div>

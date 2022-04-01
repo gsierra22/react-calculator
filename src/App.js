@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="welcome">
-      <span> Math is Fun! </span>
+      <span1> Math is Fun! </span1>
       <div className="App">
         <div className="calculator">
           <div className="display">

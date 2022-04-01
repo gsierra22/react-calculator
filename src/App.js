@@ -3,8 +3,8 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [calc, setCalc] = useState("");
-  const [result, setResult] = useState("");
+  const [calc, setCalc] = useState(""); //sets the calculation
+  const [result, setResult] = useState(""); //saves result
 
   const operators = ["+", "-", "*", "/", "."];
 
@@ -24,7 +24,8 @@ function App() {
   };
 
   const createDigits = () => {
-    const digits = [];
+    //function to create buttons for numbers
+    const digits = []; //1-9
 
     for (let i = 1; i < 10; i++) {
       digits.push(
@@ -39,12 +40,12 @@ function App() {
 
   const calculator = () => {
     setCalc(eval(calc).toString());
-  };
+  }; //programs equal button
 
   const deleteFunc = () => {
     if (calc === "") {
       return;
-    }
+    } //delete button to remove last number
 
     const value = calc.slice(0, -1);
     setCalc(value);
@@ -53,7 +54,7 @@ function App() {
   const clear = () => {
     setCalc("");
     setResult("");
-  };
+  }; //clears entire calculator
 
   return (
     <div className="welcome">

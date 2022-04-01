@@ -50,6 +50,11 @@ function App() {
     setCalc(value);
   };
 
+  const clear = () => {
+    setCalc("");
+    setResult("");
+  };
+
   return (
     <div className="App">
       <div className="calculator">
@@ -71,7 +76,7 @@ function App() {
           <button onClick={() => updateCalc(".")}>.</button>
           <button onClick={calculator}>=</button>
         </div>
-        <button>Clear</button>
+        <button onClick={clear}>Clear</button>
       </div>
     </div>
   );

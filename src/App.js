@@ -56,28 +56,31 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="calculator">
-        <div className="display">
-          {result ? <span>({result})</span> : ""}
-          {calc || "0"}
-        </div>
-        <div className="operators">
-          <button onClick={() => updateCalc("+")}>+</button>
-          <button onClick={() => updateCalc("-")}>-</button>
-          <button onClick={() => updateCalc("*")}>*</button>
-          <button onClick={() => updateCalc("/")}>/</button>
+    <div className="welcome">
+      <span> Math is Fun! </span>
+      <div className="App">
+        <div className="calculator">
+          <div className="display">
+            {result ? <span>({result})</span> : ""}
+            {calc || "0"}
+          </div>
+          <div className="operators">
+            <button onClick={() => updateCalc("+")}>+</button>
+            <button onClick={() => updateCalc("-")}>-</button>
+            <button onClick={() => updateCalc("*")}>*</button>
+            <button onClick={() => updateCalc("/")}>/</button>
 
-          <button onClick={deleteFunc}>Delete</button>
-        </div>
-        <div className="numbers">
-          {createDigits()}
-          <button onClick={() => updateCalc("0")}>0</button>
-          <button onClick={() => updateCalc(".")}>.</button>
-          <button onClick={calculator}>=</button>
-        </div>
-        <div className="clear">
-          <button onClick={clear}>Clear</button>
+            <button onClick={deleteFunc}>Delete</button>
+          </div>
+          <div className="numbers">
+            {createDigits()}
+            <button onClick={() => updateCalc("0")}>0</button>
+            <button onClick={() => updateCalc(".")}>.</button>
+            <button onClick={calculator}>=</button>
+          </div>
+          <div className="clear">
+            <button onClick={clear}>Clear</button>
+          </div>
         </div>
       </div>
     </div>

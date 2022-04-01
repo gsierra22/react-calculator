@@ -11,13 +11,22 @@
   box-sizing: border-box;
 }
 
+.welcome span {
+  font-size: 30px;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
   background-color: var(--light);
 }
 
 .App {
   display: flex;
-  min-height: 100vh;
+  min-height: 70vh;
   align-items: center;
   justify-content: center;
 }

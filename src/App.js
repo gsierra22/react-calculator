@@ -71,6 +71,7 @@ function App() {
           <button onClick={() => updateCalc(".")}>.</button>
           <button onClick={calculator}>=</button>
         </div>
+        <button>Clear</button>
       </div>
     </div>
   );

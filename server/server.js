@@ -8,6 +8,6 @@ app.listen(port, () => {
 });
 
 app.get("/calc", (req, res) => {
-  console.log("/cacl GET");
+  console.log("/calc GET");
   res.send(items);
 });

@@ -1,6 +1,6 @@
 # React Calculator
 
-I already did a calculator back at Prime, but I found an interesting one online that I coded along with. I wanted to preserve the code to use it for further learning and to play around with. The app is still a simple calculator. I added a clear button in order to fully remove everything and create a simple server as well. I plan to eventually connect it to a database.
+I already did a calculator back at Prime, but I found an interesting one online that I coded along with. I wanted to preserve the code to use it for further learning and to play around with. The app is still a simple calculator. I added a clear button in order to fully remove everything.
 
 ## Prerequisites
 

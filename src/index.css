@@ -79,3 +79,13 @@ button:hover {
   max-width: 33.333%;
   background-color: lightblue;
 }
+
+.clear {
+  background-color: lightblue;
+}
+
+.clear button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: lightblue;
+}
